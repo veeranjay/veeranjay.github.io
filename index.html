@@ -17,7 +17,16 @@
 				opacity: 1;
 			}
 		}
-		
+		@keyframes getAnimation{
+    0%{
+        transform: translateX(400px);
+        opacity: 0.1;
+        }
+    100%{
+        transform: rotate(xx) translateX(0);
+        opacity: 1;
+        }
+		}
 
 		body::-webkit-scrollbar {
 			font-family: Open Sans;
@@ -88,19 +97,18 @@
 	<div class="Project1">
 		<img class="proimg" src="Resources/stack-builder.png" alt="image">
 	</div><br>
-	<img class="proimg" src="Resources/get.png" alt="image">
+	<a href="https://play.google.com/store/apps/details?id=com.IntMain.StackBuilder"><img id="get" src="Resources/get.png" alt="image" ></a>
 
 	</div>
 	<script>
+		window.scrollTo(0,document.body.scrollHeight);
 		const images = document.querySelector('.proimg');
 		observer = new IntersectionObserver((entries)=>{
 
 			console.log(entries)
 			if(entries[0].intersectionRatio > 0){
 				entries[0].target.style.animation = 'popin 1s 1 0s ease-in-out';
-			}
-			else{
-				entries[0].target.style.animation = 'none';
+				document.getElementById('get').style.animation = 'getAnimation 1s 1 0s ease-in-out';
 			}
 
 		});
