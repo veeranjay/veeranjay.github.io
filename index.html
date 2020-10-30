@@ -7,6 +7,21 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
 
 	<style>
+		@keyframes popin{
+			0%{
+				transform: translateX(-400px);
+				opacity: 0.1;
+			}
+			100%{
+				transform: rotate(xx) translateX(0);
+				opacity: 1;
+			}
+		}
+		@keyframes default {
+			0%{transform: translateX(-400px);}100%{transform: translateX(-400px);}
+
+		}
+
 		body::-webkit-scrollbar {
 			font-family: Open Sans;
 			display: none;
@@ -47,7 +62,6 @@
 		.mid-section img:hover{
 			transform: scale(1.1);
 		}
-
 	</style>
 </head>
 <body>
@@ -71,20 +85,21 @@
 
 <div class="mid-section">
 	<div class="Project1">
-		<img class="proimg" src="Resources/stack-builder.png" alt="image"><br>
-		<h2>StackBuilder</h2>
+		<img class="proimg" src="Resources/stack-builder.png" alt="image"></div><br>
+
 	</div>
 	<script>
 		const images = document.querySelector('.proimg');
 		observer = new IntersectionObserver((entries)=>{
 
 			console.log(entries)
-			if(entries.intersectionRatio > 0){
-				entries.target.style.animation = 'animation1';
+			if(entries[0].intersectionRatio > 0){
+				entries[0].target.style.animation = 'popin 1s 1 0s ease-in-out';
 			}
 			else{
-				entries.target.style.animation = 'None';
+				entries[0].target.style.animation = 'default 1s infinite';
 			}
+
 		});
 		observer.observe(images);
 	</script>
