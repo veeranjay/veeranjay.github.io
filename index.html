@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="Resources\style.css">
 	<link rel="icon" href="Resources\home-page.png">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+
 	<style>
 		body::-webkit-scrollbar {
 			font-family: Open Sans;
@@ -41,6 +42,10 @@
 		.mid-section img{
 			width: 250px;
 			border-radius: 50%;
+
+		}
+		.mid-section img:hover{
+			transform: scale(1.1);
 		}
 
 	</style>
@@ -66,9 +71,23 @@
 
 <div class="mid-section">
 	<div class="Project1">
-		<img src="Resources/stack-builder.png" alt="image"><br>
+		<img class="proimg" src="Resources/stack-builder.png" alt="image"><br>
 		<h2>StackBuilder</h2>
 	</div>
+	<script>
+		const images = document.querySelector('.proimg');
+		observer = new IntersectionObserver((entries)=>{
+
+			console.log(entries)
+			if(entries.intersectionRatio > 0){
+				entries.target.style.animation = 'animation1';
+			}
+			else{
+				entries.target.style.animation = 'None';
+			}
+		});
+		observer.observe(images);
+	</script>
 
 </div>
 
