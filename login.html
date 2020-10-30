@@ -4,6 +4,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="Resources\style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
       html {
@@ -28,7 +29,17 @@
         text-align: center;
         padding-top: 10px;
       }
-
+      .input{
+        margin-top: 100px;
+      }
+      .input input{
+        margin-top: 10px;
+      }
+      button{
+        margin-top: 40px;
+        width: 150px;
+        background: white;
+      }
     </style>
   </head>
   <body>
@@ -48,6 +59,26 @@
   	  </div>
   	</nav>
   </body>
-  <div class="loginpanel"><h1 >Login</h1></div>
+  <script type="text/javascript">
+    function login(){
+      var usernames = ["veeranjaysingh2601@gmail.com", "stevemanion2601@gmail.com"]
+      var passwords = ["bhardwaj1229", "bhardwaj12229"]
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      if(usernames.includes(username) && passwords.includes(password)){
+
+        if(passwords[usernames.indexOf(username)] == password){
+          window.location.href = "Dashboard.html";
+        }
+        else{
+          alert("Invalid Token!");
+        }
+      }
+      else{
+        alert("Nope");
+      }
+    }
+  </script>
+  <div class="loginpanel"><h1>Login</h1><div class="input"><input id="username" type="text" value="Email Address" onsubmit="login()" style="width: 400px; height: 30px;" onclick="value=''" ><input id="password" type="text" value="Password" style="width: 400px; height: 30px;" onclick="value=''" ></div><button onclick="login()">Login</button></div>
   <footer class ="footer"></footer>
 </html>
