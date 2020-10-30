@@ -17,10 +17,7 @@
 				opacity: 1;
 			}
 		}
-		@keyframes default {
-			0%{transform: translateX(-400px);}100%{transform: translateX(-400px);}
-
-		}
+		
 
 		body::-webkit-scrollbar {
 			font-family: Open Sans;
@@ -103,7 +100,7 @@
 				entries[0].target.style.animation = 'popin 1s 1 0s ease-in-out';
 			}
 			else{
-				entries[0].target.style.animation = 'default 1s infinite';
+				entries[0].target.style.animation = 'none';
 			}
 
 		});
