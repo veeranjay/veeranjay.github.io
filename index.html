@@ -27,7 +27,9 @@
         opacity: 1;
         }
 		}
-
+		html {
+  		scroll-behavior: smooth;
+		}
 		body::-webkit-scrollbar {
 			font-family: Open Sans;
 			display: none;
@@ -83,7 +85,7 @@
 		<ul class="nav navbar-nav">
 			<li class="active"><a href="#">Home</a></li>
 			<li><a href="#">Portfolio</a></li>
-			<li><a href="#">Projects</a></li>
+			<li><a onclick="window.scrollTo(0, document.body.scrollHeight);">Projects</a></li>
 		</ul>
 	    <ul class="nav navbar-nav navbar-right">
 	      <li><a href="#"><span class="image"></span> Login</a></li>
@@ -101,7 +103,6 @@
 
 	</div>
 	<script>
-		window.scrollTo(0,document.body.scrollHeight);
 		const images = document.querySelector('.proimg');
 		observer = new IntersectionObserver((entries)=>{
 
@@ -113,6 +114,7 @@
 
 		});
 		observer.observe(images);
+
 	</script>
 
 </div>
