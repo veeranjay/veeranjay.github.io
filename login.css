@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
+body{
+    font-family: 'Montserrat';
+    font-weight: 200px;
+    color: #3083DC;
+}
+.wrapper{
+    border: 1px red dashed;
+    width: 50vw;
+    margin: auto;
+    margin-top: 5vw;
+    text-align: center;
+}
+.user{
+    width: 17vw;
+    margin: auto;
+}
+form input{
+    width: 15vw;
+    background: none;
+    border: none;
+    border: 1px solid #424242;
+    color:#3083DC;
+    font-size: 1.2vw;
+    margin: 0;
+}
+form input::placeholder{
+    color: #3083DC;
+}
+.no-outline{
+    outline: none;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" href="Resources\style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+      html {
+    		scroll-behavior: smooth;
+  		}
+  		body::-webkit-scrollbar {
+  			display: none;
+  			-ms-overflow-style: none;
+    		scrollbar-width: none;
+  		}
+      body{
+        background-color: #1c1c1c;
+        font-family: 'Poppins', sans-serif;
+      }
+      .loginpanel{
+        margin: auto;
+        margin-top: 90px;
+        width: 40%;
+        height: 650px;
+        background-color: white;
+        border-radius: 7%;
+        text-align: center;
+        padding-top: 10px;
+      }
+      .input{
+        margin-top: 100px;
+      }
+      .input input{
+        margin-top: 10px;
+      }
+      button{
+        margin-top: 40px;
+        width: 150px;
+        background: white;
+      }
+      .footer{
+        margin-top: 10px;
+  			width: 100%;
+  			height: 50px;
+  			background-color: black;
+  			padding: 15px 0px;
+  			padding-left: 10px;
+  		}
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+  	<div class="container-fluid">
+  		<div class="navbar-header">
+  			<img class="navbar-brand" src="Resources/icon-white.png" alt="image"></img>
+  		</div>
+  		<ul class="nav navbar-nav">
+  			<li class="active"><a href="https://veeranjay2601.github.io">Home</a></li>
+  			<li><a href="#">Portfolio</a></li>
+  			<li><a href="https://veeranjay2601.github.io">Projects</a></li>
+  		</ul>
+  	    <ul class="nav navbar-nav navbar-right">
+  	      <li><a href="login.html"><span class="image"></span> Login</a></li>
+  	    </ul>
+  	  </div>
+  	</nav>
+  </body>
+  <script type="text/javascript">
+    function login(){
+      var usernames = ["veeranjaysingh2601@gmail.com", "stevemanion2601@gmail.com"]
+      var passwords = ["bhardwaj1229", "bhardwaj12229"]
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      if(usernames.includes(username) && passwords.includes(password)){
+
+        if(passwords[usernames.indexOf(username)] == password){
+          window.location.href = "Dashboard.html";
+          alert("Logged In!");
+        }
+        else{
+          alert("Invalid Token!");
+        }
+      }
+      else{
+        alert("Invalid Token!");
+      }
+    }
+  </script>
+  <div class="loginpanel"><h1>Login</h1><div class="input"><input id="username" type="text" value="Email Address" onsubmit="login()" style="width: 400px; height: 30px;" onclick="value=''" ><input id="password" type="text" value="Password" style="width: 400px; height: 30px;" onclick="value=''" ></div><button onclick="login()">Login</button></div>
+  <footer class ="footer"><p1>Copyright © 2020 Int Main</p1></footer>
+</html>

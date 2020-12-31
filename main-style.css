@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins:wght@400;500&display=swap');
+body {
+    font-family: 'Montserrat';
+}
+
+/* NavBar */
+
+.custom-color {
+    background-color: #3083DC;
+}
+
+.navbar {
+    box-shadow: 0 2px 10px #3083DC;
+}
+
+.navbar input {
+    border: none;
+    background: none;
+}
+
+.navbar ul {
+    margin-right: 4vw;
+    font-size: 0.9vw;
+}
+
+.navbar ul li {
+    margin-left: 2vw;
+}
+
+.navbar-brand {
+    font-family: 'Poppins';
+}
+/* Search Box */
+.search-bar input::placeholder {
+    color: rgb(255, 255, 255);
+    opacity: 0.6;
+}
+.search-bar{
+    margin-left: 2vw;
+    color:rgba(255, 255, 255, 0.6);
+    background-color: #4391e4;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    transition-property: all;
+    transition-duration: 1s;
+}
+.search-bar input{
+    width: 20vw;
+    transition-property: all;
+    transition-duration: 1s;
+    color:white;
+}
+.search-bar input:focus{
+    width: 60vw;
+}
+.no-outline:focus{
+    outline: none;
+}
+/* Search Box */
+/* NavBar */
+.image{
+    background: url("https://www.gannett-cdn.com/-mm-/4e57f417ab56d8147a59ed2deb8f3a4b0b446da3/c=0-108-2120-1306/local/-/media/2017/02/28/USATODAY/USATODAY/636238697589955973-GettyImages-479352566.jpg");
+}

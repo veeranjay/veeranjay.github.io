@@ -1,0 +1,124 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+	<link rel="stylesheet" href="Resources\style.css">
+	<link rel="icon" href="Resources\home-page.png">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+		@keyframes popin{
+			0%{
+				transform: translateX(-400px);
+				opacity: 0.1;
+			}
+			100%{
+				transform: rotate(xx) translateX(0);
+				opacity: 1;
+			}
+		}
+		@keyframes getAnimation{
+    0%{
+        transform: translateX(400px);
+        opacity: 0.1;
+        }
+    100%{
+        transform: rotate(xx) translateX(0);
+        opacity: 1;
+        }
+		}
+		html {
+  		scroll-behavior: smooth;
+		}
+		body::-webkit-scrollbar {
+			display: none;
+			-ms-overflow-style: none;
+  		scrollbar-width: none;
+		}
+		body{
+			font-family: 'Poppins', sans-serif;
+		}
+		.background-image{
+			height: 700px;
+			width: 100%;
+			background-image: url(Resources/IntMain-black.png);
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.mid-section{
+			margin-top: 0px;
+			background-color: #1c1c1c;
+			width: 100%;
+			height: 710px;
+			text-align: center;
+			color: white;
+			padding-top: 100px;
+		}
+		.footer{
+			width: 100%;
+			height: 50px;
+			background-color: black;
+			padding: 15px 0px;
+			padding-left: 10px;
+		}
+		.mid-section img{
+			width: 250px;
+		}
+		.mid-section .Project1 img{
+
+			border-radius: 50%;
+
+		}
+		.mid-section img:hover{
+			transform: scale(1.1);
+		}
+
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<img class="navbar-brand" src="Resources/icon-white.png" alt="image"></img>
+		</div>
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="https://veeranjay2601.github.io">Home</a></li>
+			<li><a href="#">Portfolio</a></li>
+			<li><a onclick="window.scrollTo(0, document.body.scrollHeight);">Projects</a></li>
+		</ul>
+	    <ul class="nav navbar-nav navbar-right">
+	      <li><a href="login.html"><span class="image"></span> Login</a></li>
+	    </ul>
+	  </div>
+	</nav>
+
+<div class="background-image"></div>
+
+<div class="mid-section">
+	<div class="Project1">
+		<img class="proimg" src="Resources/stack-builder.png" alt="image">
+	</div><br>
+	<a href="https://play.google.com/store/apps/details?id=com.IntMain.StackBuilder"><img id="get" src="Resources/get.png" alt="image" ></a>
+
+	</div>
+	<script>
+		const images = document.querySelector('.proimg');
+		observer = new IntersectionObserver((entries)=>{
+
+			console.log(entries)
+			if(entries[0].intersectionRatio > 0){
+				entries[0].target.style.animation = 'popin 1s 1 0s ease-in-out';
+				document.getElementById('get').style.animation = 'getAnimation 1s 1 0s ease-in-out';
+			}
+
+		});
+		observer.observe(images);
+
+	</script>
+
+</div>
+
+<div class="footer"><p1>Copyright © 2020 Int Main</p1></div>
+</body>
+</html>
